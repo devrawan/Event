@@ -12,7 +12,7 @@ const tab4 = document.querySelector("body > div > ul > li:nth-child(4)");
 const con4 = document.querySelector("#content-4");
 
 var currentIndex = 0;
-
+var count=0;
  var tabs = document.querySelectorAll( " body > div > ul > li")
  var tabsObj = [...tabs];
 
@@ -21,7 +21,6 @@ var currentIndex = 0;
 
  tabsObj.forEach( function(tab , i) {
     tab.addEventListener("click" , function(view) {
-
         if (currentIndex == -1){
             currentIndex = i;
             tabsObj[i].classList.add("active");
@@ -30,7 +29,6 @@ var currentIndex = 0;
             tabsObj[currentIndex].classList.remove("active");
             tabsObj[i].classList.add("active");
 
-        
             contentsObj[currentIndex].classList.remove("active");
             contentsObj[i].classList.add("active");
 
@@ -38,3 +36,5 @@ var currentIndex = 0;
         }
     });
  });
+
+
